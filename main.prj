@@ -1,0 +1,6 @@
+vhdl work "M2.vhd"
+vhdl work "M1.vhd"
+vhdl work "color.vhd"
+vhdl work "SG.vhd"
+vhdl work "dcm_1.vhd"
+vhdl work "main.vhd"

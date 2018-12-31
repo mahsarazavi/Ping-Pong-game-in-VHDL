@@ -1,0 +1,2 @@
+vhdtdtfi -prj VGA -o "D:/education/az cad/VGA/SG.vhi" -module SG -template D:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work M2.vhd -lib work M1.vhd -lib work SG.vhd 
+vhdtdtfi -prj VGA -o C:/Users/Asus/Desktop/VGA/SG.vhi -module SG -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work M2.vhd -lib work M1.vhd -lib work color.vhd -lib work SG.vhd 

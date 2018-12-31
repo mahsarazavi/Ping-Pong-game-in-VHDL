@@ -1,0 +1,1406 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-pq208
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/USER/Desktop/VGA_final/VGA/M1.vhd" in Library work.
+Architecture behavioral of Entity hc is up to date.
+Compiling vhdl file "C:/Users/USER/Desktop/VGA_final/VGA/M2.vhd" in Library work.
+Architecture behavioral of Entity vc is up to date.
+Compiling vhdl file "C:/Users/USER/Desktop/VGA_final/VGA/color.vhd" in Library work.
+Entity <color> compiled.
+Entity <color> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/USER/Desktop/VGA_final/VGA/dcm_1.vhd" in Library work.
+Architecture behavioral of Entity dcm_1 is up to date.
+Compiling vhdl file "C:/Users/USER/Desktop/VGA_final/VGA/SG.vhd" in Library work.
+Architecture behavioral of Entity sg is up to date.
+Compiling vhdl file "C:/Users/USER/Desktop/VGA_final/VGA/main.vhd" in Library work.
+Architecture behavioral of Entity main is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <main> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <dcm_1> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <SG> in library <work> (architecture <behavioral>) with generics.
+	h_back_porch = 88
+	h_front_porch = 40
+	h_sync_pulse = 128
+	h_visible_area = 800
+	v_back_porch = 23
+	v_front_porch = 1
+	v_sync_pulse = 4
+	v_visible_area = 600
+
+Analyzing hierarchy for entity <SG> in library <work> (architecture <behavioral>) with generics.
+	h_back_porch = 144
+	h_front_porch = 24
+	h_sync_pulse = 136
+	h_visible_area = 1024
+	v_back_porch = 29
+	v_front_porch = 3
+	v_sync_pulse = 6
+	v_visible_area = 768
+
+Analyzing hierarchy for entity <HC> in library <work> (architecture <behavioral>) with generics.
+	back_porch = 88
+	front_porch = 40
+	sync_pulse = 128
+	visible_area = 800
+
+Analyzing hierarchy for entity <VC> in library <work> (architecture <behavioral>) with generics.
+	back_porch = 23
+	front_porch = 1
+	sync_pulse = 4
+	visible_area = 600
+
+Analyzing hierarchy for entity <color> in library <work> (architecture <behavioral>) with generics.
+	color = "1111111111"
+	color1 = "1110000000"
+	color2 = "0000000111"
+	dx = 10
+	dx1 = 30
+	dx2 = 30
+	dy = 10
+	dy1 = 100
+	dy2 = 100
+	h_back_porch = 88
+	h_front_porch = 40
+	h_sync_pulse = 128
+	h_visible_area = 800
+	rx = 800
+	ry = 600
+	v_back_porch = 23
+	v_front_porch = 1
+	v_sync_pulse = 4
+	v_visible_area = 600
+	x0 = 500
+	x1 = 600
+	x2 = 200
+	xd = 2
+	xd1 = 0
+	xd2 = 0
+	y0 = 500
+	y1 = 500
+	y2 = 300
+	yd = 2
+	yd1 = 1
+	yd2 = 1
+
+Analyzing hierarchy for entity <HC> in library <work> (architecture <behavioral>) with generics.
+	back_porch = 144
+	front_porch = 24
+	sync_pulse = 136
+	visible_area = 1024
+
+Analyzing hierarchy for entity <VC> in library <work> (architecture <behavioral>) with generics.
+	back_porch = 29
+	front_porch = 3
+	sync_pulse = 6
+	visible_area = 768
+
+Analyzing hierarchy for entity <color> in library <work> (architecture <behavioral>) with generics.
+	color = "1111111111"
+	color1 = "1110000000"
+	color2 = "0000000111"
+	dx = 10
+	dx1 = 30
+	dx2 = 30
+	dy = 10
+	dy1 = 100
+	dy2 = 100
+	h_back_porch = 144
+	h_front_porch = 24
+	h_sync_pulse = 136
+	h_visible_area = 1024
+	rx = 1024
+	ry = 768
+	v_back_porch = 29
+	v_front_porch = 3
+	v_sync_pulse = 6
+	v_visible_area = 768
+	x0 = 500
+	x1 = 600
+	x2 = 200
+	xd = 2
+	xd1 = 0
+	xd2 = 0
+	y0 = 500
+	y1 = 500
+	y2 = 300
+	yd = 2
+	yd1 = 1
+	yd2 = 1
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <main> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/Users/USER/Desktop/VGA_final/VGA/main.vhd" line 86: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'dcm_1'.
+Entity <main> analyzed. Unit <main> generated.
+
+Analyzing Entity <dcm_1> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <dcm_1>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <dcm_1>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <dcm_1>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <dcm_1>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "CLKFX_DIVIDE =  8" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "CLKFX_MULTIPLY =  15" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "CLKIN_PERIOD =  25.0000000000000000" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "FACTORY_JF =  8080" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "SIM_MODE =  SAFE" for instance <DCM_INST> in unit <dcm_1>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_INST> in unit <dcm_1>.
+Entity <dcm_1> analyzed. Unit <dcm_1> generated.
+
+Analyzing generic Entity <SG.1> in library <work> (Architecture <behavioral>).
+	h_back_porch = 88
+	h_front_porch = 40
+	h_sync_pulse = 128
+	h_visible_area = 800
+	v_back_porch = 23
+	v_front_porch = 1
+	v_sync_pulse = 4
+	v_visible_area = 600
+Entity <SG.1> analyzed. Unit <SG.1> generated.
+
+Analyzing generic Entity <HC.1> in library <work> (Architecture <behavioral>).
+	back_porch = 88
+	front_porch = 40
+	sync_pulse = 128
+	visible_area = 800
+Entity <HC.1> analyzed. Unit <HC.1> generated.
+
+Analyzing generic Entity <VC.1> in library <work> (Architecture <behavioral>).
+	back_porch = 23
+	front_porch = 1
+	sync_pulse = 4
+	visible_area = 600
+Entity <VC.1> analyzed. Unit <VC.1> generated.
+
+Analyzing generic Entity <color.1> in library <work> (Architecture <behavioral>).
+	color = "1111111111"
+	color1 = "1110000000"
+	color2 = "0000000111"
+	dx = 10
+	dx1 = 30
+	dx2 = 30
+	dy = 10
+	dy1 = 100
+	dy2 = 100
+	h_back_porch = 88
+	h_front_porch = 40
+	h_sync_pulse = 128
+	h_visible_area = 800
+	rx = 800
+	ry = 600
+	v_back_porch = 23
+	v_front_porch = 1
+	v_sync_pulse = 4
+	v_visible_area = 600
+	x0 = 500
+	x1 = 600
+	x2 = 200
+	xd = 2
+	xd1 = 0
+	xd2 = 0
+	y0 = 500
+	y1 = 500
+	y2 = 300
+	yd = 2
+	yd1 = 1
+	yd2 = 1
+WARNING:Xst:819 - "C:/Users/USER/Desktop/VGA_final/VGA/color.vhd" line 92: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <x_1>, <y_1>, <x_2>, <y_2>
+Entity <color.1> analyzed. Unit <color.1> generated.
+
+Analyzing generic Entity <SG.2> in library <work> (Architecture <behavioral>).
+	h_back_porch = 144
+	h_front_porch = 24
+	h_sync_pulse = 136
+	h_visible_area = 1024
+	v_back_porch = 29
+	v_front_porch = 3
+	v_sync_pulse = 6
+	v_visible_area = 768
+Entity <SG.2> analyzed. Unit <SG.2> generated.
+
+Analyzing generic Entity <HC.2> in library <work> (Architecture <behavioral>).
+	back_porch = 144
+	front_porch = 24
+	sync_pulse = 136
+	visible_area = 1024
+Entity <HC.2> analyzed. Unit <HC.2> generated.
+
+Analyzing generic Entity <VC.2> in library <work> (Architecture <behavioral>).
+	back_porch = 29
+	front_porch = 3
+	sync_pulse = 6
+	visible_area = 768
+Entity <VC.2> analyzed. Unit <VC.2> generated.
+
+Analyzing generic Entity <color.2> in library <work> (Architecture <behavioral>).
+	color = "1111111111"
+	color1 = "1110000000"
+	color2 = "0000000111"
+	dx = 10
+	dx1 = 30
+	dx2 = 30
+	dy = 10
+	dy1 = 100
+	dy2 = 100
+	h_back_porch = 144
+	h_front_porch = 24
+	h_sync_pulse = 136
+	h_visible_area = 1024
+	rx = 1024
+	ry = 768
+	v_back_porch = 29
+	v_front_porch = 3
+	v_sync_pulse = 6
+	v_visible_area = 768
+	x0 = 500
+	x1 = 600
+	x2 = 200
+	xd = 2
+	xd1 = 0
+	xd2 = 0
+	y0 = 500
+	y1 = 500
+	y2 = 300
+	yd = 2
+	yd1 = 1
+	yd2 = 1
+WARNING:Xst:819 - "C:/Users/USER/Desktop/VGA_final/VGA/color.vhd" line 92: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <x_1>, <y_1>, <x_2>, <y_2>
+Entity <color.2> analyzed. Unit <color.2> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <HC_1>.
+    Related source file is "C:/Users/USER/Desktop/VGA_final/VGA/M1.vhd".
+    Found 1-bit register for signal <o_hsync>.
+    Found 11-bit up counter for signal <counter>.
+    Found 11-bit comparator greatequal for signal <o_hsync$cmp_ge0000> created at line 65.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <HC_1> synthesized.
+
+
+Synthesizing Unit <VC_1>.
+    Related source file is "C:/Users/USER/Desktop/VGA_final/VGA/M2.vhd".
+    Found 1-bit register for signal <o_vsync>.
+    Found 10-bit up counter for signal <counter>.
+    Found 10-bit comparator greatequal for signal <o_vsync$cmp_ge0000> created at line 66.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <VC_1> synthesized.
+
+
+Synthesizing Unit <color_1>.
+    Related source file is "C:/Users/USER/Desktop/VGA_final/VGA/color.vhd".
+WARNING:Xst:1780 - Signal <y_racketRed> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <y_racketBlue> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <y_ball> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <x_racketRed> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <x_racketBlue> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <x_ball> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <x_2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000011001000.
+WARNING:Xst:653 - Signal <x_1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001111011010.
+    Found 3-bit register for signal <d>.
+    Found 32-bit comparator greater for signal <d$cmp_gt0000> created at line 115.
+    Found 32-bit comparator less for signal <d$cmp_lt0000> created at line 119.
+    Found 3-bit register for signal <d2>.
+    Found 32-bit comparator greater for signal <d2$cmp_gt0000> created at line 123.
+    Found 32-bit comparator less for signal <d2$cmp_lt0000> created at line 127.
+    Found 32-bit adder for signal <o_color$add0000> created at line 94.
+    Found 32-bit adder for signal <o_color$add0001> created at line 94.
+    Found 32-bit adder for signal <o_color$addsub0000> created at line 95.
+    Found 32-bit adder for signal <o_color$addsub0001> created at line 95.
+    Found 32-bit adder for signal <o_color$addsub0002> created at line 98.
+    Found 32-bit adder for signal <o_color$addsub0003> created at line 98.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0000> created at line 94.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0001> created at line 94.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0002> created at line 95.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0003> created at line 95.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0004> created at line 98.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0005> created at line 98.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0000> created at line 94.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0001> created at line 94.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0002> created at line 95.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0003> created at line 95.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0004> created at line 98.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0005> created at line 98.
+    Found 32-bit up accumulator for signal <x>.
+    Found 32-bit up accumulator for signal <y>.
+    Found 32-bit register for signal <y_1>.
+    Found 32-bit adder for signal <y_1$add0000> created at line 138.
+    Found 32-bit comparator greatequal for signal <y_1$cmp_ge0000> created at line 138.
+    Found 32-bit comparator lessequal for signal <y_1$cmp_le0000> created at line 132.
+    Found 32-bit comparator less for signal <y_1$cmp_lt0000> created at line 138.
+    Found 32-bit addsub for signal <y_1$mux0000>.
+    Found 32-bit register for signal <y_2>.
+    Found 32-bit adder for signal <y_2$add0000> created at line 150.
+    Found 32-bit comparator greatequal for signal <y_2$cmp_ge0000> created at line 150.
+    Found 32-bit comparator lessequal for signal <y_2$cmp_le0000> created at line 144.
+    Found 32-bit comparator less for signal <y_2$cmp_lt0000> created at line 150.
+    Found 32-bit addsub for signal <y_2$mux0000>.
+    Summary:
+	inferred   2 Accumulator(s).
+	inferred  70 D-type flip-flop(s).
+	inferred  10 Adder/Subtractor(s).
+	inferred  22 Comparator(s).
+Unit <color_1> synthesized.
+
+
+Synthesizing Unit <HC_2>.
+    Related source file is "C:/Users/USER/Desktop/VGA_final/VGA/M1.vhd".
+    Found 1-bit register for signal <o_hsync>.
+    Found 11-bit up counter for signal <counter>.
+    Found 11-bit comparator greatequal for signal <o_hsync$cmp_ge0000> created at line 65.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <HC_2> synthesized.
+
+
+Synthesizing Unit <VC_2>.
+    Related source file is "C:/Users/USER/Desktop/VGA_final/VGA/M2.vhd".
+    Found 1-bit register for signal <o_vsync>.
+    Found 10-bit up counter for signal <counter>.
+    Found 10-bit comparator greatequal for signal <o_vsync$cmp_ge0000> created at line 66.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <VC_2> synthesized.
+
+
+Synthesizing Unit <color_2>.
+    Related source file is "C:/Users/USER/Desktop/VGA_final/VGA/color.vhd".
+WARNING:Xst:1780 - Signal <y_racketRed> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <y_racketBlue> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <y_ball> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <x_racketRed> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <x_racketBlue> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <x_ball> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <x_2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000011001000.
+WARNING:Xst:653 - Signal <x_1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000010011111010.
+    Found 3-bit register for signal <d>.
+    Found 32-bit comparator greater for signal <d$cmp_gt0000> created at line 115.
+    Found 32-bit comparator less for signal <d$cmp_lt0000> created at line 119.
+    Found 3-bit register for signal <d2>.
+    Found 32-bit comparator greater for signal <d2$cmp_gt0000> created at line 123.
+    Found 32-bit comparator less for signal <d2$cmp_lt0000> created at line 127.
+    Found 32-bit adder for signal <o_color$add0000> created at line 94.
+    Found 32-bit adder for signal <o_color$add0001> created at line 94.
+    Found 32-bit adder for signal <o_color$addsub0000> created at line 95.
+    Found 32-bit adder for signal <o_color$addsub0001> created at line 95.
+    Found 32-bit adder for signal <o_color$addsub0002> created at line 98.
+    Found 32-bit adder for signal <o_color$addsub0003> created at line 98.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0000> created at line 94.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0001> created at line 94.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0002> created at line 95.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0003> created at line 95.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0004> created at line 98.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0005> created at line 98.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0000> created at line 94.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0001> created at line 94.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0002> created at line 95.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0003> created at line 95.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0004> created at line 98.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0005> created at line 98.
+    Found 32-bit up accumulator for signal <x>.
+    Found 32-bit up accumulator for signal <y>.
+    Found 32-bit register for signal <y_1>.
+    Found 32-bit adder for signal <y_1$add0000> created at line 138.
+    Found 32-bit comparator greatequal for signal <y_1$cmp_ge0000> created at line 138.
+    Found 32-bit comparator lessequal for signal <y_1$cmp_le0000> created at line 132.
+    Found 32-bit comparator less for signal <y_1$cmp_lt0000> created at line 138.
+    Found 32-bit addsub for signal <y_1$mux0000>.
+    Found 32-bit register for signal <y_2>.
+    Found 32-bit adder for signal <y_2$add0000> created at line 150.
+    Found 32-bit comparator greatequal for signal <y_2$cmp_ge0000> created at line 150.
+    Found 32-bit comparator lessequal for signal <y_2$cmp_le0000> created at line 144.
+    Found 32-bit comparator less for signal <y_2$cmp_lt0000> created at line 150.
+    Found 32-bit addsub for signal <y_2$mux0000>.
+    Summary:
+	inferred   2 Accumulator(s).
+	inferred  70 D-type flip-flop(s).
+	inferred  10 Adder/Subtractor(s).
+	inferred  22 Comparator(s).
+Unit <color_2> synthesized.
+
+
+Synthesizing Unit <dcm_1>.
+    Related source file is "C:/Users/USER/Desktop/VGA_final/VGA/dcm_1.vhd".
+Unit <dcm_1> synthesized.
+
+
+Synthesizing Unit <SG_1>.
+    Related source file is "C:/Users/USER/Desktop/VGA_final/VGA/SG.vhd".
+WARNING:Xst:1780 - Signal <o_color3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <o_color2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <o_color1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <SG_1> synthesized.
+
+
+Synthesizing Unit <SG_2>.
+    Related source file is "C:/Users/USER/Desktop/VGA_final/VGA/SG.vhd".
+WARNING:Xst:1780 - Signal <o_color3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <o_color2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <o_color1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <SG_2> synthesized.
+
+
+Synthesizing Unit <main>.
+    Related source file is "C:/Users/USER/Desktop/VGA_final/VGA/main.vhd".
+Unit <main> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 20
+ 32-bit adder                                          : 16
+ 32-bit addsub                                         : 4
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 11-bit up counter                                     : 2
+# Accumulators                                         : 4
+ 32-bit up accumulator                                 : 4
+# Registers                                            : 12
+ 1-bit register                                        : 4
+ 3-bit register                                        : 4
+ 32-bit register                                       : 4
+# Comparators                                          : 48
+ 10-bit comparator greatequal                          : 2
+ 11-bit comparator greatequal                          : 2
+ 32-bit comparator greatequal                          : 4
+ 32-bit comparator greater                             : 16
+ 32-bit comparator less                                : 20
+ 32-bit comparator lessequal                           : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1426 - The value init of the FF/Latch d_1 hinder the constant cleaning in the block Inst_color.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch d_0 hinder the constant cleaning in the block Inst_color.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch d2_1 hinder the constant cleaning in the block Inst_color.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch d2_0 hinder the constant cleaning in the block Inst_color.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch d_1 hinder the constant cleaning in the block Inst_color.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch d_0 hinder the constant cleaning in the block Inst_color.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch d2_1 hinder the constant cleaning in the block Inst_color.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch d2_0 hinder the constant cleaning in the block Inst_color.
+   You should achieve better results by setting this init to 0.
+
+Synthesizing (advanced) Unit <color_1>.
+The following registers are absorbed into accumulator <y_1>: 1 register on signal <y_1>.
+The following registers are absorbed into accumulator <y_2>: 1 register on signal <y_2>.
+Unit <color_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <color_2>.
+The following registers are absorbed into accumulator <y_1>: 1 register on signal <y_1>.
+The following registers are absorbed into accumulator <y_2>: 1 register on signal <y_2>.
+Unit <color_2> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 16
+ 32-bit adder                                          : 16
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 11-bit up counter                                     : 2
+# Accumulators                                         : 8
+ 32-bit up accumulator                                 : 4
+ 32-bit updown accumulator                             : 4
+# Registers                                            : 16
+ Flip-Flops                                            : 16
+# Comparators                                          : 48
+ 10-bit comparator greatequal                          : 2
+ 11-bit comparator greatequal                          : 2
+ 32-bit comparator greatequal                          : 4
+ 32-bit comparator greater                             : 16
+ 32-bit comparator less                                : 20
+ 32-bit comparator lessequal                           : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch d_0 hinder the constant cleaning in the block color_1.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch d_1 hinder the constant cleaning in the block color_1.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch d2_0 hinder the constant cleaning in the block color_1.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch d2_1 hinder the constant cleaning in the block color_1.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch d_0 hinder the constant cleaning in the block color_2.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch d_1 hinder the constant cleaning in the block color_2.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch d2_0 hinder the constant cleaning in the block color_2.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch d2_1 hinder the constant cleaning in the block color_2.
+   You should achieve better results by setting this init to 1.
+
+Optimizing unit <main> ...
+
+Optimizing unit <color_1> ...
+
+Optimizing unit <color_2> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 22.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 314
+ Flip-Flops                                            : 314
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main.ngr
+Top Level Output File Name         : main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 20
+
+Cell Usage :
+# BELS                             : 2962
+#      GND                         : 1
+#      INV                         : 107
+#      LUT1                        : 386
+#      LUT2                        : 329
+#      LUT2_L                      : 1
+#      LUT3                        : 157
+#      LUT4                        : 209
+#      LUT4_L                      : 1
+#      MUXCY                       : 1104
+#      MUXF5                       : 4
+#      VCC                         : 1
+#      XORCY                       : 662
+# FlipFlops/Latches                : 314
+#      FD                          : 128
+#      FDE                         : 128
+#      FDR                         : 42
+#      FDRE_1                      : 8
+#      FDS                         : 4
+#      FDSE_1                      : 4
+# Clock Buffers                    : 4
+#      BUFG                        : 4
+# IO Buffers                       : 20
+#      IBUF                        : 7
+#      IBUFG                       : 1
+#      OBUF                        : 12
+# DCMs                             : 1
+#      DCM                         : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-4 
+
+ Number of Slices:                      643  out of   3584    17%  
+ Number of Slice Flip Flops:            314  out of   7168     4%  
+ Number of 4 input LUTs:               1190  out of   7168    16%  
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    141    14%  
+ Number of GCLKs:                         4  out of      8    50%  
+ Number of DCMs:                          1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)         | Load  |
+-----------------------------------+-------------------------------+-------+
+Inst_SG1/Inst_HC/o_hsync           | NONE(Inst_SG1/Inst_VC/o_vsync)| 11    |
+i_clk                              | Inst_dcm/DCM_INST:CLK0        | 12    |
+Inst_SG2/Inst_HC/o_hsync           | NONE(Inst_SG2/Inst_VC/o_vsync)| 11    |
+i_clk                              | Inst_dcm/DCM_INST:CLKFX       | 12    |
+Inst_SG1/Inst_VC/o_vsync1          | BUFG                          | 134   |
+Inst_SG2/Inst_VC/o_vsync1          | BUFG                          | 134   |
+-----------------------------------+-------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 14.404ns (Maximum Frequency: 69.427MHz)
+   Minimum input arrival time before clock: 7.662ns
+   Maximum output required time after clock: 20.481ns
+   Maximum combinational path delay: 10.946ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_SG1/Inst_HC/o_hsync'
+  Clock period: 7.685ns (frequency: 130.124MHz)
+  Total number of paths / destination ports: 163 / 21
+-------------------------------------------------------------------------
+Delay:               7.685ns (Levels of Logic = 3)
+  Source:            Inst_SG1/Inst_VC/counter_3 (FF)
+  Destination:       Inst_SG1/Inst_VC/counter_2 (FF)
+  Source Clock:      Inst_SG1/Inst_HC/o_hsync rising
+  Destination Clock: Inst_SG1/Inst_HC/o_hsync rising
+
+  Data Path: Inst_SG1/Inst_VC/counter_3 to Inst_SG1/Inst_VC/counter_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              8   0.720   1.422  Inst_SG1/Inst_VC/counter_3 (Inst_SG1/Inst_VC/counter_3)
+     LUT4:I0->O            2   0.551   0.903  Inst_SG1/Inst_VC/counter_cmp_eq000011 (N3)
+     LUT4:I3->O            1   0.551   0.827  Inst_SG1/Inst_VC/counter_cmp_eq0000_SW0 (N12)
+     LUT4:I3->O           10   0.551   1.134  Inst_SG1/Inst_VC/counter_cmp_eq0000 (Inst_SG1/Inst_VC/counter_cmp_eq0000)
+     FDR:R                     1.026          Inst_SG1/Inst_VC/counter_2
+    ----------------------------------------
+    Total                      7.685ns (3.399ns logic, 4.286ns route)
+                                       (44.2% logic, 55.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'i_clk'
+  Clock period: 11.749ns (frequency: 85.115MHz)
+  Total number of paths / destination ports: 386 / 46
+-------------------------------------------------------------------------
+Delay:               6.266ns (Levels of Logic = 2)
+  Source:            Inst_SG2/Inst_HC/counter_2 (FF)
+  Destination:       Inst_SG2/Inst_HC/counter_0 (FF)
+  Source Clock:      i_clk rising 1.9X
+  Destination Clock: i_clk rising 1.9X
+
+  Data Path: Inst_SG2/Inst_HC/counter_2 to Inst_SG2/Inst_HC/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              7   0.720   1.405  Inst_SG2/Inst_HC/counter_2 (Inst_SG2/Inst_HC/counter_2)
+     LUT4:I0->O            1   0.551   0.869  Inst_SG2/Inst_HC/counter_cmp_eq000010 (Inst_SG2/Inst_HC/counter_cmp_eq000010)
+     LUT4:I2->O           11   0.551   1.144  Inst_SG2/Inst_HC/counter_cmp_eq000032 (Inst_SG2/Inst_HC/counter_cmp_eq0000)
+     FDS:S                     1.026          Inst_SG2/Inst_HC/counter_0
+    ----------------------------------------
+    Total                      6.266ns (2.848ns logic, 3.418ns route)
+                                       (45.5% logic, 54.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_SG2/Inst_HC/o_hsync'
+  Clock period: 7.998ns (frequency: 125.031MHz)
+  Total number of paths / destination ports: 164 / 21
+-------------------------------------------------------------------------
+Delay:               7.998ns (Levels of Logic = 3)
+  Source:            Inst_SG2/Inst_VC/counter_4 (FF)
+  Destination:       Inst_SG2/Inst_VC/counter_0 (FF)
+  Source Clock:      Inst_SG2/Inst_HC/o_hsync rising
+  Destination Clock: Inst_SG2/Inst_HC/o_hsync rising
+
+  Data Path: Inst_SG2/Inst_VC/counter_4 to Inst_SG2/Inst_VC/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              8   0.720   1.422  Inst_SG2/Inst_VC/counter_4 (Inst_SG2/Inst_VC/counter_4)
+     LUT4:I0->O            2   0.551   0.903  Inst_SG2/Inst_VC/counter_cmp_eq000011 (N4)
+     LUT4:I3->O            1   0.551   1.140  Inst_SG2/Inst_VC/counter_cmp_eq0000_SW0 (N10)
+     LUT4:I0->O           10   0.551   1.134  Inst_SG2/Inst_VC/counter_cmp_eq0000 (Inst_SG2/Inst_VC/counter_cmp_eq0000)
+     FDS:S                     1.026          Inst_SG2/Inst_VC/counter_0
+    ----------------------------------------
+    Total                      7.998ns (3.399ns logic, 4.599ns route)
+                                       (42.5% logic, 57.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_SG1/Inst_VC/o_vsync1'
+  Clock period: 14.404ns (frequency: 69.427MHz)
+  Total number of paths / destination ports: 563537 / 204
+-------------------------------------------------------------------------
+Delay:               14.404ns (Levels of Logic = 62)
+  Source:            Inst_SG1/Inst_color/y_2_3 (FF)
+  Destination:       Inst_SG1/Inst_color/y_2_31 (FF)
+  Source Clock:      Inst_SG1/Inst_VC/o_vsync1 falling
+  Destination Clock: Inst_SG1/Inst_VC/o_vsync1 falling
+
+  Data Path: Inst_SG1/Inst_color/y_2_3 to Inst_SG1/Inst_color/y_2_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.720   1.260  Inst_SG1/Inst_color/y_2_3 (Inst_SG1/Inst_color/y_2_3)
+     LUT1:I0->O            1   0.551   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<3>_rt (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<3>_rt)
+     MUXCY:S->O            1   0.500   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<3> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<4> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<5> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<6> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<7> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<8> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<9> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<10> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<11> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<12> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<13> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<14> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<15> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<16> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<17> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<18> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<19> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<20> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<21> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<22> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<23> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<24> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_y_2_add0000_cy<25> (Inst_SG1/Inst_color/Madd_y_2_add0000_cy<25>)
+     XORCY:CI->O           1   0.904   1.140  Inst_SG1/Inst_color/Madd_y_2_add0000_xor<26> (Inst_SG1/Inst_color/y_2_add0000<26>)
+     LUT4:I0->O            1   0.551   0.000  Inst_SG1/Inst_color/Mcompar_y_2_cmp_ge0000_lut<9> (Inst_SG1/Inst_color/Mcompar_y_2_cmp_ge0000_lut<9>)
+     MUXCY:S->O            1   0.500   0.000  Inst_SG1/Inst_color/Mcompar_y_2_cmp_ge0000_cy<9> (Inst_SG1/Inst_color/Mcompar_y_2_cmp_ge0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_y_2_cmp_ge0000_cy<10> (Inst_SG1/Inst_color/Mcompar_y_2_cmp_ge0000_cy<10>)
+     MUXCY:CI->O          34   0.303   2.060  Inst_SG1/Inst_color/Mcompar_y_2_cmp_ge0000_cy<11> (Inst_SG1/Inst_color/y_2_cmp_ge0000)
+     LUT2:I1->O            1   0.551   0.801  Inst_SG1/Inst_color/y_2_mux00011 (Inst_SG1/Inst_color/y_2_mux0001_inv1_inv)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<0> (Inst_SG1/Inst_color/Maccum_y_2_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<1> (Inst_SG1/Inst_color/Maccum_y_2_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<2> (Inst_SG1/Inst_color/Maccum_y_2_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<3> (Inst_SG1/Inst_color/Maccum_y_2_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<4> (Inst_SG1/Inst_color/Maccum_y_2_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<5> (Inst_SG1/Inst_color/Maccum_y_2_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<6> (Inst_SG1/Inst_color/Maccum_y_2_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<7> (Inst_SG1/Inst_color/Maccum_y_2_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<8> (Inst_SG1/Inst_color/Maccum_y_2_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<9> (Inst_SG1/Inst_color/Maccum_y_2_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<10> (Inst_SG1/Inst_color/Maccum_y_2_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<11> (Inst_SG1/Inst_color/Maccum_y_2_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<12> (Inst_SG1/Inst_color/Maccum_y_2_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<13> (Inst_SG1/Inst_color/Maccum_y_2_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<14> (Inst_SG1/Inst_color/Maccum_y_2_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<15> (Inst_SG1/Inst_color/Maccum_y_2_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<16> (Inst_SG1/Inst_color/Maccum_y_2_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<17> (Inst_SG1/Inst_color/Maccum_y_2_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<18> (Inst_SG1/Inst_color/Maccum_y_2_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<19> (Inst_SG1/Inst_color/Maccum_y_2_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<20> (Inst_SG1/Inst_color/Maccum_y_2_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<21> (Inst_SG1/Inst_color/Maccum_y_2_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<22> (Inst_SG1/Inst_color/Maccum_y_2_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<23> (Inst_SG1/Inst_color/Maccum_y_2_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<24> (Inst_SG1/Inst_color/Maccum_y_2_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<25> (Inst_SG1/Inst_color/Maccum_y_2_cy<25>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<26> (Inst_SG1/Inst_color/Maccum_y_2_cy<26>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<27> (Inst_SG1/Inst_color/Maccum_y_2_cy<27>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<28> (Inst_SG1/Inst_color/Maccum_y_2_cy<28>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<29> (Inst_SG1/Inst_color/Maccum_y_2_cy<29>)
+     MUXCY:CI->O           0   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<30> (Inst_SG1/Inst_color/Maccum_y_2_cy<30>)
+     XORCY:CI->O           1   0.904   0.000  Inst_SG1/Inst_color/Maccum_y_2_xor<31> (Inst_SG1/Inst_color/Result<31>3)
+     FDE:D                     0.203          Inst_SG1/Inst_color/y_2_31
+    ----------------------------------------
+    Total                     14.404ns (9.143ns logic, 5.261ns route)
+                                       (63.5% logic, 36.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_SG2/Inst_VC/o_vsync1'
+  Clock period: 14.404ns (frequency: 69.427MHz)
+  Total number of paths / destination ports: 563537 / 204
+-------------------------------------------------------------------------
+Delay:               14.404ns (Levels of Logic = 62)
+  Source:            Inst_SG2/Inst_color/y_2_3 (FF)
+  Destination:       Inst_SG2/Inst_color/y_2_31 (FF)
+  Source Clock:      Inst_SG2/Inst_VC/o_vsync1 falling
+  Destination Clock: Inst_SG2/Inst_VC/o_vsync1 falling
+
+  Data Path: Inst_SG2/Inst_color/y_2_3 to Inst_SG2/Inst_color/y_2_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.720   1.260  Inst_SG2/Inst_color/y_2_3 (Inst_SG2/Inst_color/y_2_3)
+     LUT1:I0->O            1   0.551   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<3>_rt (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<3>_rt)
+     MUXCY:S->O            1   0.500   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<3> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<4> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<5> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<6> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<7> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<8> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<9> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<10> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<11> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<12> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<13> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<14> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<15> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<16> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<17> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<18> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<19> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<20> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<21> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<22> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<23> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<24> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_y_2_add0000_cy<25> (Inst_SG2/Inst_color/Madd_y_2_add0000_cy<25>)
+     XORCY:CI->O           1   0.904   1.140  Inst_SG2/Inst_color/Madd_y_2_add0000_xor<26> (Inst_SG2/Inst_color/y_2_add0000<26>)
+     LUT4:I0->O            1   0.551   0.000  Inst_SG2/Inst_color/Mcompar_y_2_cmp_ge0000_lut<9> (Inst_SG2/Inst_color/Mcompar_y_2_cmp_ge0000_lut<9>)
+     MUXCY:S->O            1   0.500   0.000  Inst_SG2/Inst_color/Mcompar_y_2_cmp_ge0000_cy<9> (Inst_SG2/Inst_color/Mcompar_y_2_cmp_ge0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_y_2_cmp_ge0000_cy<10> (Inst_SG2/Inst_color/Mcompar_y_2_cmp_ge0000_cy<10>)
+     MUXCY:CI->O          34   0.303   2.060  Inst_SG2/Inst_color/Mcompar_y_2_cmp_ge0000_cy<11> (Inst_SG2/Inst_color/y_2_cmp_ge0000)
+     LUT2:I1->O            1   0.551   0.801  Inst_SG2/Inst_color/y_2_mux00011 (Inst_SG2/Inst_color/y_2_mux0001_inv1_inv)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<0> (Inst_SG2/Inst_color/Maccum_y_2_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<1> (Inst_SG2/Inst_color/Maccum_y_2_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<2> (Inst_SG2/Inst_color/Maccum_y_2_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<3> (Inst_SG2/Inst_color/Maccum_y_2_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<4> (Inst_SG2/Inst_color/Maccum_y_2_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<5> (Inst_SG2/Inst_color/Maccum_y_2_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<6> (Inst_SG2/Inst_color/Maccum_y_2_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<7> (Inst_SG2/Inst_color/Maccum_y_2_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<8> (Inst_SG2/Inst_color/Maccum_y_2_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<9> (Inst_SG2/Inst_color/Maccum_y_2_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<10> (Inst_SG2/Inst_color/Maccum_y_2_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<11> (Inst_SG2/Inst_color/Maccum_y_2_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<12> (Inst_SG2/Inst_color/Maccum_y_2_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<13> (Inst_SG2/Inst_color/Maccum_y_2_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<14> (Inst_SG2/Inst_color/Maccum_y_2_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<15> (Inst_SG2/Inst_color/Maccum_y_2_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<16> (Inst_SG2/Inst_color/Maccum_y_2_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<17> (Inst_SG2/Inst_color/Maccum_y_2_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<18> (Inst_SG2/Inst_color/Maccum_y_2_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<19> (Inst_SG2/Inst_color/Maccum_y_2_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<20> (Inst_SG2/Inst_color/Maccum_y_2_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<21> (Inst_SG2/Inst_color/Maccum_y_2_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<22> (Inst_SG2/Inst_color/Maccum_y_2_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<23> (Inst_SG2/Inst_color/Maccum_y_2_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<24> (Inst_SG2/Inst_color/Maccum_y_2_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<25> (Inst_SG2/Inst_color/Maccum_y_2_cy<25>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<26> (Inst_SG2/Inst_color/Maccum_y_2_cy<26>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<27> (Inst_SG2/Inst_color/Maccum_y_2_cy<27>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<28> (Inst_SG2/Inst_color/Maccum_y_2_cy<28>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<29> (Inst_SG2/Inst_color/Maccum_y_2_cy<29>)
+     MUXCY:CI->O           0   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<30> (Inst_SG2/Inst_color/Maccum_y_2_cy<30>)
+     XORCY:CI->O           1   0.904   0.000  Inst_SG2/Inst_color/Maccum_y_2_xor<31> (Inst_SG2/Inst_color/Result<31>3)
+     FDE:D                     0.203          Inst_SG2/Inst_color/y_2_31
+    ----------------------------------------
+    Total                     14.404ns (9.143ns logic, 5.261ns route)
+                                       (63.5% logic, 36.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_SG1/Inst_VC/o_vsync1'
+  Total number of paths / destination ports: 1248 / 128
+-------------------------------------------------------------------------
+Offset:              7.662ns (Levels of Logic = 34)
+  Source:            button<3> (PAD)
+  Destination:       Inst_SG1/Inst_color/y_2_31 (FF)
+  Destination Clock: Inst_SG1/Inst_VC/o_vsync1 falling
+
+  Data Path: button<3> to Inst_SG1/Inst_color/y_2_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            68   0.821   2.398  button_3_IBUF (button_3_IBUF)
+     LUT2:I0->O            1   0.551   0.801  Inst_SG1/Inst_color/y_2_mux00011 (Inst_SG1/Inst_color/y_2_mux0001_inv1_inv)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<0> (Inst_SG1/Inst_color/Maccum_y_2_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<1> (Inst_SG1/Inst_color/Maccum_y_2_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<2> (Inst_SG1/Inst_color/Maccum_y_2_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<3> (Inst_SG1/Inst_color/Maccum_y_2_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<4> (Inst_SG1/Inst_color/Maccum_y_2_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<5> (Inst_SG1/Inst_color/Maccum_y_2_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<6> (Inst_SG1/Inst_color/Maccum_y_2_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<7> (Inst_SG1/Inst_color/Maccum_y_2_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<8> (Inst_SG1/Inst_color/Maccum_y_2_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<9> (Inst_SG1/Inst_color/Maccum_y_2_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<10> (Inst_SG1/Inst_color/Maccum_y_2_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<11> (Inst_SG1/Inst_color/Maccum_y_2_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<12> (Inst_SG1/Inst_color/Maccum_y_2_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<13> (Inst_SG1/Inst_color/Maccum_y_2_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<14> (Inst_SG1/Inst_color/Maccum_y_2_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<15> (Inst_SG1/Inst_color/Maccum_y_2_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<16> (Inst_SG1/Inst_color/Maccum_y_2_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<17> (Inst_SG1/Inst_color/Maccum_y_2_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<18> (Inst_SG1/Inst_color/Maccum_y_2_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<19> (Inst_SG1/Inst_color/Maccum_y_2_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<20> (Inst_SG1/Inst_color/Maccum_y_2_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<21> (Inst_SG1/Inst_color/Maccum_y_2_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<22> (Inst_SG1/Inst_color/Maccum_y_2_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<23> (Inst_SG1/Inst_color/Maccum_y_2_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<24> (Inst_SG1/Inst_color/Maccum_y_2_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<25> (Inst_SG1/Inst_color/Maccum_y_2_cy<25>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<26> (Inst_SG1/Inst_color/Maccum_y_2_cy<26>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<27> (Inst_SG1/Inst_color/Maccum_y_2_cy<27>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<28> (Inst_SG1/Inst_color/Maccum_y_2_cy<28>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<29> (Inst_SG1/Inst_color/Maccum_y_2_cy<29>)
+     MUXCY:CI->O           0   0.064   0.000  Inst_SG1/Inst_color/Maccum_y_2_cy<30> (Inst_SG1/Inst_color/Maccum_y_2_cy<30>)
+     XORCY:CI->O           1   0.904   0.000  Inst_SG1/Inst_color/Maccum_y_2_xor<31> (Inst_SG1/Inst_color/Result<31>3)
+     FDE:D                     0.203          Inst_SG1/Inst_color/y_2_31
+    ----------------------------------------
+    Total                      7.662ns (4.463ns logic, 3.199ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_SG2/Inst_VC/o_vsync1'
+  Total number of paths / destination ports: 1248 / 128
+-------------------------------------------------------------------------
+Offset:              7.662ns (Levels of Logic = 34)
+  Source:            button<3> (PAD)
+  Destination:       Inst_SG2/Inst_color/y_2_31 (FF)
+  Destination Clock: Inst_SG2/Inst_VC/o_vsync1 falling
+
+  Data Path: button<3> to Inst_SG2/Inst_color/y_2_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            68   0.821   2.398  button_3_IBUF (button_3_IBUF)
+     LUT2:I0->O            1   0.551   0.801  Inst_SG2/Inst_color/y_2_mux00011 (Inst_SG2/Inst_color/y_2_mux0001_inv1_inv)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<0> (Inst_SG2/Inst_color/Maccum_y_2_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<1> (Inst_SG2/Inst_color/Maccum_y_2_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<2> (Inst_SG2/Inst_color/Maccum_y_2_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<3> (Inst_SG2/Inst_color/Maccum_y_2_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<4> (Inst_SG2/Inst_color/Maccum_y_2_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<5> (Inst_SG2/Inst_color/Maccum_y_2_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<6> (Inst_SG2/Inst_color/Maccum_y_2_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<7> (Inst_SG2/Inst_color/Maccum_y_2_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<8> (Inst_SG2/Inst_color/Maccum_y_2_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<9> (Inst_SG2/Inst_color/Maccum_y_2_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<10> (Inst_SG2/Inst_color/Maccum_y_2_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<11> (Inst_SG2/Inst_color/Maccum_y_2_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<12> (Inst_SG2/Inst_color/Maccum_y_2_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<13> (Inst_SG2/Inst_color/Maccum_y_2_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<14> (Inst_SG2/Inst_color/Maccum_y_2_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<15> (Inst_SG2/Inst_color/Maccum_y_2_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<16> (Inst_SG2/Inst_color/Maccum_y_2_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<17> (Inst_SG2/Inst_color/Maccum_y_2_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<18> (Inst_SG2/Inst_color/Maccum_y_2_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<19> (Inst_SG2/Inst_color/Maccum_y_2_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<20> (Inst_SG2/Inst_color/Maccum_y_2_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<21> (Inst_SG2/Inst_color/Maccum_y_2_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<22> (Inst_SG2/Inst_color/Maccum_y_2_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<23> (Inst_SG2/Inst_color/Maccum_y_2_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<24> (Inst_SG2/Inst_color/Maccum_y_2_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<25> (Inst_SG2/Inst_color/Maccum_y_2_cy<25>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<26> (Inst_SG2/Inst_color/Maccum_y_2_cy<26>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<27> (Inst_SG2/Inst_color/Maccum_y_2_cy<27>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<28> (Inst_SG2/Inst_color/Maccum_y_2_cy<28>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<29> (Inst_SG2/Inst_color/Maccum_y_2_cy<29>)
+     MUXCY:CI->O           0   0.064   0.000  Inst_SG2/Inst_color/Maccum_y_2_cy<30> (Inst_SG2/Inst_color/Maccum_y_2_cy<30>)
+     XORCY:CI->O           1   0.904   0.000  Inst_SG2/Inst_color/Maccum_y_2_xor<31> (Inst_SG2/Inst_color/Result<31>3)
+     FDE:D                     0.203          Inst_SG2/Inst_color/y_2_31
+    ----------------------------------------
+    Total                      7.662ns (4.463ns logic, 3.199ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'i_clk'
+  Total number of paths / destination ports: 1091 / 11
+-------------------------------------------------------------------------
+Offset:              17.052ns (Levels of Logic = 8)
+  Source:            Inst_SG2/Inst_HC/counter_4 (FF)
+  Destination:       o_color<9> (PAD)
+  Source Clock:      i_clk rising 1.9X
+
+  Data Path: Inst_SG2/Inst_HC/counter_4 to o_color<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              9   0.720   1.463  Inst_SG2/Inst_HC/counter_4 (Inst_SG2/Inst_HC/counter_4)
+     LUT4:I0->O            1   0.551   0.000  Inst_SG2/Inst_color/o_color_and0001171 (Inst_SG2/Inst_color/o_color_and0001171)
+     MUXF5:I0->O           1   0.360   0.869  Inst_SG2/Inst_color/o_color_and000117_f5 (Inst_SG2/Inst_color/o_color_and000117)
+     LUT4:I2->O            1   0.551   0.827  Inst_SG2/Inst_color/o_color_and000187_SW0 (N15)
+     LUT4:I3->O            2   0.551   1.216  Inst_SG2/Inst_color/o_color_and000187 (Inst_SG2/Inst_color/o_color_and0001)
+     LUT4:I0->O            1   0.551   0.801  Inst_SG2/Inst_color/o_color<8>109_SW1 (N23)
+     MUXF5:S->O            1   0.621   0.869  Inst_SG2/Inst_color/o_color<8>122_f5 (color2<7>)
+     LUT4:I2->O            3   0.551   0.907  o_color<9>1 (o_color_7_OBUF)
+     OBUF:I->O                 5.644          o_color_7_OBUF (o_color<7>)
+    ----------------------------------------
+    Total                     17.052ns (10.100ns logic, 6.952ns route)
+                                       (59.2% logic, 40.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_SG2/Inst_HC/o_hsync'
+  Total number of paths / destination ports: 661 / 11
+-------------------------------------------------------------------------
+Offset:              17.036ns (Levels of Logic = 23)
+  Source:            Inst_SG2/Inst_VC/counter_0 (FF)
+  Destination:       o_color<9> (PAD)
+  Source Clock:      Inst_SG2/Inst_HC/o_hsync rising
+
+  Data Path: Inst_SG2/Inst_VC/counter_0 to o_color<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              8   0.720   1.422  Inst_SG2/Inst_VC/counter_0 (Inst_SG2/Inst_VC/counter_0)
+     LUT2:I0->O            1   0.551   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_lut<0> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<0> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<1> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<2> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<3> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<4> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<5> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<6> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<7> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<8> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<9> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<10> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<11> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<12> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<13> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<14> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<15> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<15>)
+     MUXCY:CI->O           1   0.303   0.869  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<16> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<16>)
+     LUT4:I2->O            2   0.551   1.216  Inst_SG2/Inst_color/o_color_and000187 (Inst_SG2/Inst_color/o_color_and0001)
+     LUT4:I0->O            1   0.551   0.801  Inst_SG2/Inst_color/o_color<8>109_SW1 (N23)
+     MUXF5:S->O            1   0.621   0.869  Inst_SG2/Inst_color/o_color<8>122_f5 (color2<7>)
+     LUT4:I2->O            3   0.551   0.907  o_color<9>1 (o_color_7_OBUF)
+     OBUF:I->O                 5.644          o_color_7_OBUF (o_color<7>)
+    ----------------------------------------
+    Total                     17.036ns (10.952ns logic, 6.084ns route)
+                                       (64.3% logic, 35.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_SG1/Inst_HC/o_hsync'
+  Total number of paths / destination ports: 571 / 11
+-------------------------------------------------------------------------
+Offset:              15.301ns (Levels of Logic = 22)
+  Source:            Inst_SG1/Inst_VC/counter_0 (FF)
+  Destination:       o_color<9> (PAD)
+  Source Clock:      Inst_SG1/Inst_HC/o_hsync rising
+
+  Data Path: Inst_SG1/Inst_VC/counter_0 to o_color<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              8   0.720   1.422  Inst_SG1/Inst_VC/counter_0 (Inst_SG1/Inst_VC/counter_0)
+     LUT2:I0->O            1   0.551   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_lut<0> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<0> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<1> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<2> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<3> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<4> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<5> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<6> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<7> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<8> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<9> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<10> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<11> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<12> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<13> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<14> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<15> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<15>)
+     MUXCY:CI->O           2   0.303   0.945  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<16> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<16>)
+     LUT3:I2->O            1   0.551   0.869  Inst_SG1/Inst_color/o_color<8>117_SW0 (N19)
+     LUT4:I2->O            1   0.551   0.827  Inst_SG1/Inst_color/o_color<8>117 (Inst_SG1/Inst_color/o_color<8>117)
+     LUT4:I3->O            3   0.551   0.907  o_color<9>1 (o_color_7_OBUF)
+     OBUF:I->O                 5.644          o_color_7_OBUF (o_color<7>)
+    ----------------------------------------
+    Total                     15.301ns (10.331ns logic, 4.970ns route)
+                                       (67.5% logic, 32.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_SG1/Inst_VC/o_vsync1'
+  Total number of paths / destination ports: 16261 / 10
+-------------------------------------------------------------------------
+Offset:              18.746ns (Levels of Logic = 33)
+  Source:            Inst_SG1/Inst_color/y_1_3 (FF)
+  Destination:       o_color<9> (PAD)
+  Source Clock:      Inst_SG1/Inst_VC/o_vsync1 falling
+
+  Data Path: Inst_SG1/Inst_color/y_1_3 to o_color<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.720   1.260  Inst_SG1/Inst_color/y_1_3 (Inst_SG1/Inst_color/y_1_3)
+     LUT1:I0->O            1   0.551   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<3>_rt (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<3>_rt)
+     MUXCY:S->O            1   0.500   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<3> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<4> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<5> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<6> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<7> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<8> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<9> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<10> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<11> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<12> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<13> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<14> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<15> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<16> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<17> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<18> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<19> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<20> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<21> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<22> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<23> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<24> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<25> (Inst_SG1/Inst_color/Madd_o_color_addsub0001_cy<25>)
+     XORCY:CI->O           1   0.904   1.140  Inst_SG1/Inst_color/Madd_o_color_addsub0001_xor<26> (Inst_SG1/Inst_color/o_color_addsub0001<26>)
+     LUT4:I0->O            1   0.551   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_lut<14> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_lut<14>)
+     MUXCY:S->O            1   0.500   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<14> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<15> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<15>)
+     MUXCY:CI->O           2   0.303   0.945  Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<16> (Inst_SG1/Inst_color/Mcompar_o_color_cmp_lt0003_cy<16>)
+     LUT3:I2->O            1   0.551   0.869  Inst_SG1/Inst_color/o_color<8>117_SW0 (N19)
+     LUT4:I2->O            1   0.551   0.827  Inst_SG1/Inst_color/o_color<8>117 (Inst_SG1/Inst_color/o_color<8>117)
+     LUT4:I3->O            3   0.551   0.907  o_color<9>1 (o_color_7_OBUF)
+     OBUF:I->O                 5.644          o_color_7_OBUF (o_color<7>)
+    ----------------------------------------
+    Total                     18.746ns (12.798ns logic, 5.948ns route)
+                                       (68.3% logic, 31.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_SG2/Inst_VC/o_vsync1'
+  Total number of paths / destination ports: 19684 / 10
+-------------------------------------------------------------------------
+Offset:              20.481ns (Levels of Logic = 34)
+  Source:            Inst_SG2/Inst_color/y_1_3 (FF)
+  Destination:       o_color<9> (PAD)
+  Source Clock:      Inst_SG2/Inst_VC/o_vsync1 falling
+
+  Data Path: Inst_SG2/Inst_color/y_1_3 to o_color<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.720   1.260  Inst_SG2/Inst_color/y_1_3 (Inst_SG2/Inst_color/y_1_3)
+     LUT1:I0->O            1   0.551   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<3>_rt (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<3>_rt)
+     MUXCY:S->O            1   0.500   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<3> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<4> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<5> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<6> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<7> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<8> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<9> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<10> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<11> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<12> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<13> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<14> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<15> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<16> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<17> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<18> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<19> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<20> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<21> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<22> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<23> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<24> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<25> (Inst_SG2/Inst_color/Madd_o_color_addsub0001_cy<25>)
+     XORCY:CI->O           1   0.904   1.140  Inst_SG2/Inst_color/Madd_o_color_addsub0001_xor<26> (Inst_SG2/Inst_color/o_color_addsub0001<26>)
+     LUT4:I0->O            1   0.551   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_lut<14> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_lut<14>)
+     MUXCY:S->O            1   0.500   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<14> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<15> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<15>)
+     MUXCY:CI->O           1   0.303   0.869  Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<16> (Inst_SG2/Inst_color/Mcompar_o_color_cmp_lt0003_cy<16>)
+     LUT4:I2->O            2   0.551   1.216  Inst_SG2/Inst_color/o_color_and000187 (Inst_SG2/Inst_color/o_color_and0001)
+     LUT4:I0->O            1   0.551   0.801  Inst_SG2/Inst_color/o_color<8>109_SW1 (N23)
+     MUXF5:S->O            1   0.621   0.869  Inst_SG2/Inst_color/o_color<8>122_f5 (color2<7>)
+     LUT4:I2->O            3   0.551   0.907  o_color<9>1 (o_color_7_OBUF)
+     OBUF:I->O                 5.644          o_color_7_OBUF (o_color<7>)
+    ----------------------------------------
+    Total                     20.481ns (13.419ns logic, 7.062ns route)
+                                       (65.5% logic, 34.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 24 / 12
+-------------------------------------------------------------------------
+Delay:               10.946ns (Levels of Logic = 4)
+  Source:            i_sr<0> (PAD)
+  Destination:       o_color<9> (PAD)
+
+  Data Path: i_sr<0> to o_color<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.821   1.256  i_sr_0_IBUF (i_sr_0_IBUF)
+     LUT2:I0->O            2   0.551   1.216  o_color<0>11 (N01)
+     LUT4:I0->O            3   0.551   0.907  o_color<9>1 (o_color_7_OBUF)
+     OBUF:I->O                 5.644          o_color_7_OBUF (o_color<7>)
+    ----------------------------------------
+    Total                     10.946ns (7.567ns logic, 3.379ns route)
+                                       (69.1% logic, 30.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.25 secs
+ 
+--> 
+
+Total memory usage is 4568836 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   41 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

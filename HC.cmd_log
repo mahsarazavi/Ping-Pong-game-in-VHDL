@@ -1,0 +1,1 @@
+vhdtdtfi -prj VGA -o "D:/education/az cad/VGA/HC.vhi" -module HC -template D:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work M1.vhd 

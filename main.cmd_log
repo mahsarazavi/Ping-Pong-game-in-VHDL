@@ -1,0 +1,24 @@
+xst -intstyle ise -ifn "C:/Users/USER/Desktop/VGA_final/VGA/main.xst" -ofn "C:/Users/USER/Desktop/VGA_final/VGA/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "D:/Documents/7/cad lab/AVA3S400 UCF/FPGA.ucf" -uc "D:/Documents/7/cad lab/AVA3S400 UCF/VGA.ucf" -uc "D:/Documents/7/cad lab/AVA3S400 UCF/DIPSwitch.ucf" -uc "D:/Documents/7/cad lab/AVA3S400 UCF/BUTTON_SWITCH.ucf" -p xc3s400-pq208-4 main.ngc main.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -t 1 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/Users/USER/Desktop/VGA_final/VGA/main.xst" -ofn "C:/Users/USER/Desktop/VGA_final/VGA/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "D:/Documents/7/cad lab/AVA3S400 UCF/FPGA.ucf" -uc "D:/Documents/7/cad lab/AVA3S400 UCF/VGA.ucf" -uc "D:/Documents/7/cad lab/AVA3S400 UCF/DIPSwitch.ucf" -uc "D:/Documents/7/cad lab/AVA3S400 UCF/BUTTON_SWITCH.ucf" -p xc3s400-pq208-4 main.ngc main.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -t 1 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/Users/USER/Desktop/VGA_final/VGA/main.xst" -ofn "C:/Users/USER/Desktop/VGA_final/VGA/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "D:/Documents/7/cad lab/AVA3S400 UCF/FPGA.ucf" -uc "D:/Documents/7/cad lab/AVA3S400 UCF/VGA.ucf" -uc "D:/Documents/7/cad lab/AVA3S400 UCF/DIPSwitch.ucf" -uc "D:/Documents/7/cad lab/AVA3S400 UCF/BUTTON_SWITCH.ucf" -p xc3s400-pq208-4 main.ngc main.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -t 1 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/Users/USER/Desktop/VGA_final/VGA/main.xst" -ofn "C:/Users/USER/Desktop/VGA_final/VGA/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "D:/Documents/7/cad lab/AVA3S400 UCF/FPGA.ucf" -uc "D:/Documents/7/cad lab/AVA3S400 UCF/VGA.ucf" -uc "D:/Documents/7/cad lab/AVA3S400 UCF/DIPSwitch.ucf" -uc "D:/Documents/7/cad lab/AVA3S400 UCF/BUTTON_SWITCH.ucf" -p xc3s400-pq208-4 main.ngc main.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -t 1 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 

@@ -1,0 +1,120 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf
+
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc3s400,pq208,-4 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock i_clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+o_color<0>  |   19.938(R)|clkfx             |   0.000|
+            |   16.397(R)|clkzero           |   0.000|
+o_color<1>  |   20.281(R)|clkfx             |   0.000|
+            |   16.740(R)|clkzero           |   0.000|
+o_color<2>  |   20.975(R)|clkfx             |   0.000|
+            |   17.434(R)|clkzero           |   0.000|
+o_color<3>  |   20.877(R)|clkfx             |   0.000|
+            |   15.883(R)|clkzero           |   0.000|
+o_color<4>  |   20.854(R)|clkfx             |   0.000|
+            |   15.860(R)|clkzero           |   0.000|
+o_color<5>  |   19.577(R)|clkfx             |   0.000|
+            |   14.583(R)|clkzero           |   0.000|
+o_color<6>  |   20.305(R)|clkfx             |   0.000|
+            |   15.311(R)|clkzero           |   0.000|
+o_color<7>  |   18.622(R)|clkfx             |   0.000|
+            |   15.453(R)|clkzero           |   0.000|
+o_color<8>  |   18.925(R)|clkfx             |   0.000|
+            |   15.756(R)|clkzero           |   0.000|
+o_color<9>  |   19.316(R)|clkfx             |   0.000|
+            |   16.147(R)|clkzero           |   0.000|
+o_hsync     |   10.507(R)|clkfx             |   0.000|
+            |    8.073(R)|clkzero           |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock i_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+i_clk          |    5.117|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+i_sr<0>        |o_color<0>     |   11.797|
+i_sr<0>        |o_color<1>     |   12.140|
+i_sr<0>        |o_color<2>     |   12.834|
+i_sr<0>        |o_color<3>     |   10.736|
+i_sr<0>        |o_color<4>     |   10.713|
+i_sr<0>        |o_color<5>     |    9.436|
+i_sr<0>        |o_color<6>     |   10.164|
+i_sr<0>        |o_color<7>     |   10.851|
+i_sr<0>        |o_color<8>     |   11.154|
+i_sr<0>        |o_color<9>     |   11.545|
+i_sr<0>        |o_hsync        |   10.580|
+i_sr<0>        |o_vsync        |   11.261|
+i_sr<1>        |o_color<0>     |   12.806|
+i_sr<1>        |o_color<1>     |   13.149|
+i_sr<1>        |o_color<2>     |   13.843|
+i_sr<1>        |o_color<3>     |   11.080|
+i_sr<1>        |o_color<4>     |   11.057|
+i_sr<1>        |o_color<5>     |    9.780|
+i_sr<1>        |o_color<6>     |   10.508|
+i_sr<1>        |o_color<7>     |   11.860|
+i_sr<1>        |o_color<8>     |   12.163|
+i_sr<1>        |o_color<9>     |   12.554|
+i_sr<1>        |o_hsync        |   10.899|
+i_sr<1>        |o_vsync        |   11.547|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Dec 31 12:26:17 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4507 MB
+
+
+

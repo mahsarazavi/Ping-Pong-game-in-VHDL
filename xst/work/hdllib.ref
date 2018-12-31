@@ -1,0 +1,12 @@
+AR main behavioral C:/Users/USER/Desktop/VGA_final/VGA/main.vhd sub00/vhpl11 1546246548
+EN hc NULL C:/Users/USER/Desktop/VGA_final/VGA/M1.vhd sub00/vhpl00 1546246537
+AR hc behavioral C:/Users/USER/Desktop/VGA_final/VGA/M1.vhd sub00/vhpl01 1546246538
+AR color behavioral C:/Users/USER/Desktop/VGA_final/VGA/color.vhd sub00/vhpl05 1546246542
+EN main NULL C:/Users/USER/Desktop/VGA_final/VGA/main.vhd sub00/vhpl10 1546246547
+AR dcm_1 behavioral C:/Users/USER/Desktop/VGA_final/VGA/dcm_1.vhd sub00/vhpl07 1546246544
+EN sg NULL C:/Users/USER/Desktop/VGA_final/VGA/SG.vhd sub00/vhpl08 1546246545
+EN vc NULL C:/Users/USER/Desktop/VGA_final/VGA/M2.vhd sub00/vhpl02 1546246539
+AR sg behavioral C:/Users/USER/Desktop/VGA_final/VGA/SG.vhd sub00/vhpl09 1546246546
+EN dcm_1 NULL C:/Users/USER/Desktop/VGA_final/VGA/dcm_1.vhd sub00/vhpl06 1546246543
+AR vc behavioral C:/Users/USER/Desktop/VGA_final/VGA/M2.vhd sub00/vhpl03 1546246540
+EN color NULL C:/Users/USER/Desktop/VGA_final/VGA/color.vhd sub00/vhpl04 1546246541
